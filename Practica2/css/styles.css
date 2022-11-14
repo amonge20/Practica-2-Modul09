@@ -2,6 +2,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     max-width: fit-content;
+    overflow-x: hidden;
 }
 
 /*La etiqueta <p> tindra un padding del 1%*/
