@@ -188,7 +188,7 @@ span {
     grid-row: 1;
 }
 /*Acompanyat del grid del div imagesmenu1*/
-.imgmenu2{
+.imgmenu2 {
     width: 95%;
     grid-column: 2;
     grid-row: 1;
@@ -214,12 +214,6 @@ span {
     margin-top: -15%;
     grid-column: 1;
     grid-row: 4/4;
-}
-/*Li fiquem grid a les imatges 3 i 4*/
-.imagenesmenu2{
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
 }
 /*Acompanyat del grid del div imagesmenu2*/
 .imgmenu3 {
