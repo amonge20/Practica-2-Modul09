@@ -120,21 +120,9 @@ span {
     left: 22%;
     line-height: 1.4;
 }
-/*Section id contenidor ajustant el section amb l'adaptació de la pagina web*/
-.card        {grid-area: card;}
-.boxmenu     {grid-area: box;}
-.ajusta      {grid-area: ajusta;}
-.contingut   {grid-area: cont;}
-.imagesmenu1 {grid-area: img1;}
-.imagesmenu2 {grid-area: img2;}
-
+/*Section id contenidor li fem un grid*/
 #contenidor {
     display: grid;
-    grid-template-areas: 
-    'card card card'
-    'box box box'
-    'ajusta cont cont'
-    'ajusta img1 img2';
     gap: 30px;
     margin-top: 80px;
     margin-left: 15%;
@@ -142,9 +130,9 @@ span {
 }
 /*Ajustem la classe card*/
 .card {
-    font-size: 170%;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    font-size: 150%;
+    grid-column: 1;
+    grid-row: 1;
 }
 /*Fiquem una capsa al menu*/
 .boxmenu {
@@ -157,6 +145,8 @@ span {
     height: 45px;
     margin: 0%;
     padding-top: 12px;
+    grid-column: 1/4;
+    grid-row: 2;
 }
 /*Estructura del grid amb les següents classes desde el ajusta fins a les imatges1 i 2*/
 .ajusta {
@@ -165,59 +155,56 @@ span {
     font-weight: bold;
     line-height: 22em;
     width: 180%;
-    height: 90%;
+    height: 101%;
     margin-top: -10%;
+    grid-column: 1;
+    grid-row: 3/4;
 }
-
+/*Es posa en el centre i dreta del grid*/
 .contingut {
     margin-top: -2%;
     margin-left: 3%;
+    grid-column: 2/4;
+    grid-row: 3;
 }
-
+/*Acompanyara al contingut del grid*/
 .ajustap {
     margin-top: -2%;
     margin-left: -10px;
     margin-right: 1%;
     line-height: 1.3;
+    grid-column: 1;
+    grid-row: 3/4;
 }
-
-
-
-div.imgfood .imgmenu1{
-    margin:0;
-    padding:0;
-    margin-top: 35px;
-}
-
-div.imgfood span{
-    display:none;
- }
-
- div.imgfood span span{
-    display:none;
- }
-
-/*Estructura del grid amb les següents classes desde el contingut2 fins a les imatges3 i 4*/
-.ajusta2     {grid-area: ajusta2;}
-.contingut2  {grid-area: cont2;}
-.imagesmenu3 {grid-area: img3;}
-.imagesmenu4 {grid-area: img4;}
-
-#contenidor2 {
+/*Li fiquem grid a les imatges 1 i 2*/
+.imagesmenu {
     display: grid;
-    grid-template-areas: 
-    'ajusta2 cont2 cont2'
-    'ajusta2 img3 img4';
-    gap: 30px;
-    margin-top: 80px;
-    margin-left: 15%;
-    margin-right: 15%;
 }
+/*Acompanyat del grid del div imagesmenu*/
+.imgmenu1{
+    width: 95%;
+    margin-left: 0%;
+    grid-column: 1;
+    grid-row: 1;
+}
+/*Acompanyat del grid del div imagesmenu1*/
+.imgmenu2{
+    width: 95%;
+    grid-column: 2;
+    grid-row: 1;
+}
+/*No es mostrara el text de la imatge del grid*/
+.imgtext {
+    display: none;
+}
+/*Estructura del grid amb les següents classes desde el contingut2 fins a les imatges3 i 4*/
 .contingut2 {
     margin-top: -2%;
     margin-left: 3%;
+    grid-column: 2/4;
+    grid-row: 4;
 }
-
+/*Acompanyara al contingut del grid*/
 .ajusta2 {
     border: rgb(162, 162, 233) 1px solid;
     text-align: center;
@@ -225,30 +212,39 @@ div.imgfood span{
     width: 180%;
     height: 102%;
     margin-top: -15%;
+    grid-column: 1;
+    grid-row: 4/4;
 }
-
+/*Li fiquem grid a les imatges 3 i 4*/
+.imagenesmenu2{
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+}
+/*Acompanyat del grid del div imagesmenu2*/
 .imgmenu3 {
     width: 95%;
+    grid-column: 1;
+    grid-row: 1;
 }
-
+/*Acompanyat del grid del div imagesmenu2*/
 .imgmenu4 {
     width: 95%;
+    grid-column: 2;
+    grid-row: 1;
 }
-
 /*Section id gallery ajustant el section amb l'adaptació de la pagina web*/
 #gallery {
     margin-top: 6%;
     margin-left: 15%;
     margin-right: 15%;
 }
-
 /*Fican un flex en la div class*/
 .galeria {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
-
 /*Les imatges que corresponen en aquesta class, es faran més fosces que les altres*/
 .sombra {
     width: 23%;
@@ -256,7 +252,6 @@ div.imgfood span{
     margin-right: 10px;
     filter: brightness(50%);
 }
-
 /*Al seleccionar la class sombra, es fara més fosc*/
 .sombra:hover {
     border: black 2px solid;
@@ -266,14 +261,12 @@ div.imgfood span{
     padding: 3px;
     filter: brightness(30%);
 }
-
 /*Les imatges que corresponen en aquesta class, es faran més clares que les altres*/
 .brillo {
     width: 23%;
     margin-top: 10px;
     margin-right: 10px;
 }
-
 /*Al seleccionar la class sombra, es fara fosc*/
 .brillo:hover {
     border: black 2px solid;
@@ -283,14 +276,12 @@ div.imgfood span{
     padding: 3px;
     filter: brightness(70%);
 }
-
 /*Ajustem l'estructura del footer*/
 footer {
     background-color: black;
     color: white;
     display: flex;
 }
-
 /*Adaptem el tamany de les 2 imatges*/
 .imgfinal {
     width: 18px;
@@ -300,7 +291,6 @@ footer {
     padding-left: 2px;
     padding-right: 2px;
 }
-
 /*Ajustem el text d'aquesta classe*/
 .restfoot {
     margin-left: 60%;
