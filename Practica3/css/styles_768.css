@@ -76,13 +76,13 @@
         font-size: 125%;
     }
     /*Ajustem la secció nosaltres*/
-    #nosa{
+    #nosa {
         margin-left: 8%;
         margin-right: 8%;
         margin-top: 5%;
     }
     /*Ajustem la segona seccio de nosaltres*/
-    #nosa2{
+    #nosa2 {
         margin-left: 8%;
         margin-right: 8%;
         margin-top: 6%;
@@ -119,7 +119,6 @@
     }
     /*Menu de la carta en grid*/
     #contenidor {
-        display: grid;
         gap: 30px;
         margin-top: -3%;
         margin-left: 8%;
@@ -127,9 +126,8 @@
     }
     /*Ajustem la carta per el grid*/
     .card {
-        grid-column: 1;
-        grid-row: 1;
         font-size: 225%;
+        grid-column: 1/1;
     }
     /*Fiquem una capsa al menu en el grid*/
     .boxmenu {
@@ -142,8 +140,6 @@
         height: 60px;
         margin: 0%;
         padding-top: 12px;
-        grid-column: 1/4;
-        grid-row: 2;
     }
     /*Estructura del grid amb les següents classes desde el ajusta fins a les imatges1 i 2*/
     .ajusta {
@@ -155,15 +151,11 @@
         width: 101%;
         height: 101%;
         margin-top: -10%;
-        grid-column: 1;
-        grid-row: 3/4;
     }
     /*Ajustem el contingut tant en el costat del menu com el menu 1*/
     .contingut {
         margin-top: -6%;
         margin-left: -2%;
-        grid-column: 2/4;
-        grid-row: 3;
     }
     /*El text sota del contingut*/
     .ajustap {
@@ -172,49 +164,44 @@
         margin-right: 1%;
         line-height: 1.3;
     }
-    /*Seccio de les imatges 1 i 2*/
+    /*Les imagesmenu i imagesmenu2 es fara com si fos una taula i li fiquem un flex*/
     .imagesmenu{
+        display: table;
         flex-wrap: wrap;
     }
     /*La primera imatge que li ficarem un width que ocupi tota la linea de la linea*/
-    .imgmenu1{
+    .imgmenu1 {
         width: 100%;
     }
     /*Li fiquem la segona imatge fent un grid*/
-    .imgmenu2{
+    .imgmenu2 {
         grid-column: 1;
         grid-row: 2;
         width: 100%;
     }
-    /*Aquet div serveix per posar a sobre de les imatges*/
-    div.imgfood{
-        display:table;
-    }
-    /*Creem el div per generar la classe imgfood amb l'etiqueta img*/
-    div.imgfood img{
+    /*Fem un tamany per les 4 imatges del grid*/
+    .imgmenu1, .imgmenu2, .imgmenu3, .imgmenu4 {
        margin:0;
        padding:0;
        margin-top: 35px;
     }
-    /*Creem el div per generar la classe imgfood amb l'etiqueta span*/
-    div.imgfood span{
+    /*Creem el div per generar el text dela taula següent*/
+    .imagesmenu .imgtext{
        line-height: 45%;
        display:table-caption;
        margin:0;
        padding:0;
-       background:#646464;
        color:white;
        text-align:center;
        position:relative;
        height:0;
     }
-    /**/
-    div.imgfood span span{
-       background:rgba(0, 0, 0, 0.6);
+    /*Creem la taula que n'hi ha el text de color blanc amb el fons negre per saber el nom dela imatge*/
+    .imagesmenu .imgtext, .imagesmenu2 .imgtext {
+       background:rgba(0, 0, 0, 0.8);
        display:block;
        padding: 40px;
-       text-shadow:0 0 15px white;
-       margin-top: 198px;
+       margin-top: -80px;
     }
     /*Estructura del grid amb les següents classes desde el contingut2 fins a les imatges3 i 4*/
     .ajusta2 {
@@ -222,14 +209,12 @@
         font-size: 125%;
         line-height: 30em;
         width: 101%;
-        height: 100.3%;
+        height: 101%;
     }
     /*La segúent secció per fer grid*/
     .contingut2 {
         margin-top: -5%;
         margin-left: -2%;
-        grid-column: 2/4;
-        grid-row: 4;
     }
     /*La següent secció per les 2 següents imatges*/
     .imagesmenu2{
