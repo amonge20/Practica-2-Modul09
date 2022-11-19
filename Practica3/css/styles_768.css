@@ -192,13 +192,14 @@
        margin:0;
        padding:0;
        color:white;
+       font-size: 125%;
        text-align:center;
        position:relative;
        height:0;
     }
     /*Creem la taula que n'hi ha el text de color blanc amb el fons negre per saber el nom dela imatge*/
     .imagesmenu .imgtext, .imagesmenu2 .imgtext {
-       background:rgba(0, 0, 0, 0.8);
+       background:rgba(0, 0, 0, 0.5);
        display:block;
        padding: 40px;
        margin-top: -80px;
@@ -209,7 +210,7 @@
         font-size: 125%;
         line-height: 30em;
         width: 101%;
-        height: 101%;
+        height: 100.3%;
     }
     /*La segúent secció per fer grid*/
     .contingut2 {
