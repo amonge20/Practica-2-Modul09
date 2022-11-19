@@ -217,10 +217,6 @@
         margin-top: -5%;
         margin-left: -2%;
     }
-    /*La següent secció per les 2 següents imatges*/
-    .imagesmenu2{
-        flex-wrap: wrap;
-    }
     /*La primera imatge del segon grid en que li fiquem un width per a que ocupi tota la linea de la pagina*/
     .imgmenu3{
         width: 100%;
