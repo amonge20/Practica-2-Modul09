@@ -1,0 +1,19 @@
+/*Ajustem l'estructura del footer*/
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+/*Adaptem el tamany de les 2 imatges*/
+.imgfinal {
+    width: 18px;
+    height: 20px;
+    margin-top: 32px;
+    margin-left: 25px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+/*Ajustem el text d'aquesta classe*/
+.restfoot {
+    margin-left: 60%;
+}
